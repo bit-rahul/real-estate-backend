@@ -1,0 +1,48 @@
+<!-- Register View -->
+<div class="col-md-3 register-left">
+  <img
+    src="https://res.cloudinary.com/dxceimqgz/image/upload/c_scale,w_50/v1605554724/realEstate/homes/logo_sg9dez.png"
+    alt="" />
+  <h3>Welcome</h3>
+</div>
+<div class="col-md-9 register-right">
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <h3 class="register-heading">Apply as Landlord</h3>
+      <form class="register-form" action="/" method="POST">
+
+        <div class="row">
+          <%- include ("./partials/messages") %>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="name" id="name" required name="name" class="form-control" placeholder="Full Name *"
+                value="<%= typeof name != 'undefined' ? name : '' %>" />
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required class="form-control" placeholder="Email *"
+                value="<%= typeof email != 'undefined' ? email : '' %>" />
+            </div>
+            <div class="form-group">
+              <input type="text" maxlength="10" minlength="10" id="contact" name="contact" required class="form-control"
+                placeholder="Contact *" value="<%= typeof contact != 'undefined' ? contact : '' %>" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="password" id="password" name="password" required class="form-control"
+                placeholder="Password *" value="<%= typeof password != 'undefined' ? password : '' %>" />
+            </div>
+            <div class="form-group">
+              <input type="password" id="password2" name="password2" required class="form-control"
+                placeholder="Confirm Password *" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+            </div>
+            <input type="submit" class="btnRegister" value="Register" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
